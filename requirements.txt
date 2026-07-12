@@ -16,3 +16,4 @@ joblib
 python-dotenv
 requests
 pillow
+tensorflow
