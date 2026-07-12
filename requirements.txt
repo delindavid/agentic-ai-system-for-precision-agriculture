@@ -1,0 +1,17 @@
+streamlit
+flask
+fastapi
+uvicorn
+langchain
+langchain-openai
+langchain-community
+openai
+ollama
+faiss-cpu
+pandas
+numpy
+scikit-learn
+joblib
+python-dotenv
+requests
+pillow
