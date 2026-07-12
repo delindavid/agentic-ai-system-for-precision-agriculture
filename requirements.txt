@@ -1,6 +1,7 @@
 streamlit
 flask
 fastapi
+opencv-python-headless
 uvicorn
 langchain
 langchain-openai
