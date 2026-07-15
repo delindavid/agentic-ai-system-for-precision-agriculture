@@ -110,11 +110,11 @@ CONFIDENCE_THRESHOLD = 0.55   # below this the validator flags low confidence
 TOMATO_MODEL_PATH   = "tomato_model.keras"
 TOMATO_CLASSES_PATH = "tomato_classes.pkl"
 
-RICE_MODEL_PATH   = r"C:\Users\Hey!\Desktop\AI Projects\Portfolio\Agentic AI System for Precision Agriculture\Rice type detection\best_model.keras"
-RICE_CLASSES_PATH = r"C:\Users\Hey!\Desktop\AI Projects\Portfolio\Agentic AI System for Precision Agriculture\Rice type detection\classes.pkl"
+RICE_MODEL_PATH   = r"C:\Users\Hey!\Desktop\Agentic AI System for Precision Agriculture\Rice type detection\best_model.keras"
+RICE_CLASSES_PATH = r"C:\Users\Hey!\Desktop\Agentic AI System for Precision Agriculture\Rice type detection\classes.pkl"
 
-FERTILIZER_MODEL_PATH   = r"C:\Users\Hey!\Desktop\AI Projects\Portfolio\Agentic AI System for Precision Agriculture\Fertilizer prediciton\fertilizer_model.pkl"
-FERTILIZER_ENCODERS_PATH = r"C:\Users\Hey!\Desktop\AI Projects\Portfolio\Agentic AI System for Precision Agriculture\Fertilizer prediciton\encoders.pkl"
+FERTILIZER_MODEL_PATH   = r"C:\Users\Hey!\Desktop\Agentic AI System for Precision Agriculture\Fertilizer prediciton\fertilizer_model.pkl"
+FERTILIZER_ENCODERS_PATH = r"C:\Users\Hey!\Desktop\Agentic AI System for Precision Agriculture\Fertilizer prediciton\encoders.pkl"
 
 # ═══════════════════════════════════════════════════════════════════════════
 #  MODEL LOADING — @st.cache_resource so they load once
@@ -123,12 +123,12 @@ FERTILIZER_ENCODERS_PATH = r"C:\Users\Hey!\Desktop\AI Projects\Portfolio\Agentic
 @st.cache_resource
 def load_llm():
     """Fast generation LLM (OllamaLLM) used for explanations."""
-    return OllamaLLM(model="mistral", temperature=0.3)
+    return ChatOpenAI(model="gpt-4o-mini", temperature=0.3)
 
 @st.cache_resource
 def load_chat_llm():
     """Chat LLM (ChatOllama) used by the supervisor for structured routing."""
-    return ChatOllama(model="mistral", temperature=0.0, format="json")
+    return ChatOpenAI(model="gpt-4o-mini", temperature=0.0)
 
 @st.cache_resource
 def load_tomato():
