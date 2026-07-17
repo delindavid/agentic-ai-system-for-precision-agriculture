@@ -28,6 +28,7 @@ import streamlit as st
 import tensorflow as tf
 
 # ── LangChain / LangGraph ─────────────────────────────────────────────────
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_ollama import OllamaLLM, ChatOllama
 from langchain_core.messages import HumanMessage, AIMessage, SystemMessage, BaseMessage
 from langchain_core.tools import tool
